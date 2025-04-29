@@ -24,24 +24,24 @@ def createAndSaveModel():
     testing_images = testing_images[:4000]
     testing_labels = testing_labels[:4000]
 
-    # model = models.Sequential()
-    # model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)))
-    # model.add(layers.MaxPooling2D((2, 2)))
-    # model.add(layers.Conv2D(64, (3, 3), activation='relu'))
-    # model.add(layers.MaxPooling2D((2, 2)))
-    # model.add(layers.Conv2D(64, (3, 3), activation='relu'))
-    # model.add(layers.Flatten())
-    # model.add(layers.Dense(64, activation='relu'))
-    # model.add(layers.Dense(10, activation='softmax'))
+    model = models.Sequential()
+    model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)))
+    model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+    model.add(layers.MaxPooling2D((2, 2)))
+    model.add(layers.Conv2D(64, (3, 3), activation='relu'))
+    model.add(layers.Flatten())
+    model.add(layers.Dense(64, activation='relu'))
+    model.add(layers.Dense(10, activation='softmax'))
 
-    # model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-    # model.fit(training_images, training_labels, epochs=10, validation_data =(testing_images, testing_labels))
-    #
-    # loss, accuracy = model.evaluate(testing_images, testing_labels)
-    # print('Test loss:', loss)
-    # print('Test accuracy:', accuracy)
-    #
-    # model.save('model.h5')
+    model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+    model.fit(training_images, training_labels, epochs=10, validation_data =(testing_images, testing_labels))
+
+    loss, accuracy = model.evaluate(testing_images, testing_labels)
+    print('Test loss:', loss)
+    print('Test accuracy:', accuracy)
+
+    model.save('model.h5')
 
     model = models.load_model('model.h5')
     img = cv.imread('plane_a321-2541649_640_32.png')
