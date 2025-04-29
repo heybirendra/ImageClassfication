@@ -1,0 +1,16 @@
+{
+  "Current salary (break up)": {
+    "MonthlySalary": "AED 25K Monthly",
+    "OtherBenefits": {
+      "VisaIncludingFamily": "true",
+      "HealthInsuranceIncludingFamily": "true",
+      "AirFareAllowanceIncludingFamily": "true",
+      "AirFareAllowanceAmount": "29000 AED approx, annually"
+    }
+  },
+  "Expected_Salary": "AED 30K Monthly",
+  "TotalYearOfExperience": "16+",
+  "SoftwareDevelopmentExperience": "16+",
+  "IT Cloud Solutions Exp": "3 Years on AWS",
+  "Sdlc and Agile Iterative Methodologies": "Yes Using Agile. Following Sprint/UserStories/Confluence etc"
+}
